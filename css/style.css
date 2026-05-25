@@ -106,6 +106,8 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 body {
@@ -115,6 +117,7 @@ body {
   background-color: var(--color-white);
   line-height: 1.7;
   overflow-x: hidden;
+  max-width: 100%;
 }
 
 img {
@@ -1167,6 +1170,9 @@ blockquote {
   .section { padding: var(--space-16) 0; }
   .section--lg { padding: var(--space-20) 0; }
 
+  .hero__content { padding-left: var(--space-5); padding-right: var(--space-5); }
+  .service-bar { padding-left: var(--space-5); padding-right: var(--space-5); }
+
   .grid-2, .grid-3 { grid-template-columns: 1fr; }
   .help-grid { grid-template-columns: 1fr 1fr; gap: var(--space-3); }
   .help-suboptions { grid-template-columns: 1fr; }
@@ -1177,7 +1183,7 @@ blockquote {
   .hero__actions .btn { width: 100%; text-align: center; justify-content: center; }
 
   .form-row { grid-template-columns: 1fr; }
-  .service-bar__inner { gap: var(--space-4); justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; }
+  .service-bar__inner { gap: var(--space-3); justify-content: center; flex-wrap: wrap; overflow-x: hidden; }
 
   .footer__grid  { grid-template-columns: 1fr; gap: var(--space-8); }
   .footer__bottom { flex-direction: column; text-align: center; }
