@@ -1196,12 +1196,33 @@ blockquote {
 
   .nav__logo-img { height: 42px; }
 
-  /* Photo grids stack vertically */
+  /* Inline-styled grids: collapse to single column and reduce gap */
+  [style*="grid-template-columns:1fr 1fr"],
   [style*="grid-template-columns: 1fr 1fr"] {
     grid-template-columns: 1fr !important;
+    gap: 32px !important;
   }
-  [style*="display: grid; grid-template-columns: 1fr 1fr"] {
+  [style*="grid-template-columns:repeat(3,1fr)"],
+  [style*="grid-template-columns: repeat(3,1fr)"],
+  [style*="grid-template-columns:repeat(3, 1fr)"] {
     grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+  /* Photo card stack: remove absolute positioning on mobile */
+  [style*="position:relative;height:480px"],
+  [style*="position: relative; height: 480px"] {
+    height: auto !important;
+    min-height: 280px !important;
+  }
+  [style*="position:absolute;top:0;right:0;width:80%"],
+  [style*="position:absolute;top:0;right:0"] {
+    position: relative !important;
+    width: 100% !important;
+    height: 260px !important;
+  }
+  [style*="position:absolute;bottom:0;left:0;width:55%"] {
+    position: relative !important;
+    width: 100% !important;
   }
 
   .event-card { flex-wrap: wrap; }
